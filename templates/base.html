@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{%load static%}
+{%load crispy_forms_tags%}
+<html lang="en">
+<head>
+  <title>{%block title_block%} All Students {%endblock%}</title>
+  <meta charset="utf-8">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+</head>
+<body>
+<div class="fixed-top">
+ 
+  <nav class="navbar bg-dark navbar-dark justify-content-between">
+    <div class="container-fluid " >
+      <ul class=" form-inline ">
+        <div class="nav-item active">
+          <a class="nav-link" href="{%url 'studentProfileApp:home'%}">Home</a>       
+        </div>
+        <div class="nav-item ">
+          <a class="nav-link" href="{%url 'studentProfileApp:signUp'%}">Sign Up</a>       
+        </div>
+       
+      </ul>
+      <form method="GET" class="form-inline" action="{%url 'studentProfileApp:home'%}">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" name="src" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+    
+  </nav>
+
+  </div>
+<div class="container" style="padding-top: 30px;">
+{% block body_block %}
+
+{% endblock %}
+<div class="fixed-bottom" >
+<footer class="bg-dark text-center text-white">
+
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">SM Software Ltd.</a>
+  </div>
+
+</footer>
+</div>
+
+</div>
+
+</body>
+</html>
+
+
+
+
+
+  

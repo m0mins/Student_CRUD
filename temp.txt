@@ -1,0 +1,20 @@
+<div class="fixed-top">
+
+<nav class="navbar bg-dark navbar-dark justify-content-between">
+  <div class="container-fluid " >
+    <ul class="navbar-nav ">
+      <div class="nav-item active">
+        <a class="nav-link" href="{%url 'studentProfileApp:home'%}">Home</a>       
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="">About</a>
+      </div>
+    </ul>
+    <form method="GET" class="form-inline" action="{%url 'studentProfileApp:home'%}">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" name="src" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+  
+</nav>
+  </div>

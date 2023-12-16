@@ -1,0 +1,39 @@
+{% extends 'base.html'%}
+{%load crispy_forms_tags%}
+{%block title_block%}Sign Up {%endblock%}
+{% block body_block %}
+
+<div class="col d-flex justify-content-center">
+    <div class="card mb-3" style="max-width: 540px; margin-top: 40px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="/media/{{student_id.image}}" style="width:100%; height:200px;">
+        </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h4 class="card-title">{{student_id.name}}</h4>
+              <p class="card-text">Email Address : {{student_id.email}}</p>
+              <p class="card-text">Student ID : {{student_id.su_id}}</p>
+              <p class="card-text">Department : {{student_id.department}}</p>
+              <p class="card-text">Phone Number : {{student_id.phone}}</p>
+              <p class="card-text">Gender : {{student_id.gender}}</p>
+              <p class="card-text">Religion : {{student_id.religion}}</p>
+              <p class="card-text">Address : {{student_id.address}}</p>
+              
+            </div>
+          </div>
+          
+        </div>
+        <div class="card-footer text-muted">
+            <a href="{% url 'studentProfileApp:editStudent' pk=student_id.pk %}" class="btn btn-success">Update</a>
+
+            <a href="{% url 'studentProfileApp:studentDelete' pk=student_id.pk %}" class="btn btn-danger">Delete</a>
+
+          </div>
+      </div>
+
+</div>
+
+    
+
+{%endblock%}
